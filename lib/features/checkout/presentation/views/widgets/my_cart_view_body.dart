@@ -15,7 +15,7 @@ class MyCartViewBody extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(height: 15),
-          Image.asset("assets/images/Group 6.png"),
+          Expanded(child: Image.asset("assets/images/Group 6.png")),
           SizedBox(height: 15),
           OrderInfo(nameProduct: 'Order Subtotal', priceProduct: 42.97),
           SizedBox(height: 3),
@@ -33,6 +33,7 @@ class MyCartViewBody extends StatelessWidget {
           TotalPrice(totalPrice: 50.97),
           SizedBox(height: 16),
           CustomButton(txt: 'Complete Payment', onPressed: () {}),
+          SizedBox(height: 12),
         ],
       ),
     );
