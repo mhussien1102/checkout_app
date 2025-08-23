@@ -3,6 +3,8 @@ import 'package:checkout_app/features/checkout/presentation/views/widgets/total_
     show TotalPrice;
 import 'package:flutter/material.dart';
 
+import '../../../../../core/widgets/custom_button.dart';
+
 class MyCartViewBody extends StatelessWidget {
   const MyCartViewBody({super.key});
 
@@ -29,6 +31,8 @@ class MyCartViewBody extends StatelessWidget {
           ),
           SizedBox(height: 15),
           TotalPrice(totalPrice: 50.97),
+          SizedBox(height: 16),
+          CustomButton(txt: 'Complete Payment', onPressed: () {}),
         ],
       ),
     );
