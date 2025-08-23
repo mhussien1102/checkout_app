@@ -1,3 +1,4 @@
+import 'package:checkout_app/features/checkout/presentation/views/widgets/my_cart_view_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -21,6 +22,7 @@ class MyCartView extends StatelessWidget {
         title: Text('My Cart', style: AppTextStyles.text25w500),
         centerTitle: true,
       ),
+      body: MyCartViewBody(),
     );
   }
 }
