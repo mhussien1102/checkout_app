@@ -2,6 +2,7 @@ import 'package:checkout_app/features/checkout/presentation/views/widgets/my_car
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../../core/methods/build_appbar.dart';
 import '../../../../core/utils/style.dart';
 
 class MyCartView extends StatelessWidget {
@@ -9,20 +10,6 @@ class MyCartView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        leading: Center(
-          child: GestureDetector(
-            onTap: () {},
-            child: SvgPicture.asset('assets/icons/Arrow 1.svg'),
-          ),
-        ),
-        elevation: 0,
-        backgroundColor: Colors.transparent,
-        title: Text('My Cart', style: AppTextStyles.text25w500),
-        centerTitle: true,
-      ),
-      body: MyCartViewBody(),
-    );
+    return Scaffold(appBar: buildAppBar('My Cart'), body: MyCartViewBody());
   }
 }
