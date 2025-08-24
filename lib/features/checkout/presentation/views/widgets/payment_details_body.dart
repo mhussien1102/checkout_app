@@ -12,7 +12,19 @@ class PaymentDetailsBody extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(height: 32),
-          CardPayment(icon: "assets/images/SVGRepo_iconCarrier.svg"),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CardPayment(
+                icon: "assets/images/SVGRepo_iconCarrier.svg",
+                isActve: true,
+              ),
+              SizedBox(width: 20),
+              CardPayment(icon: "assets/images/Group.svg"),
+              SizedBox(width: 20),
+              CardPayment(icon: "assets/images/Group1.svg"),
+            ],
+          ),
         ],
       ),
     );
