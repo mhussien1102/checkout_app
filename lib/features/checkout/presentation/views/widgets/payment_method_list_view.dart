@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-
 import 'card_payment.dart';
 
 class PaymentMethodListView extends StatefulWidget {
   const PaymentMethodListView({super.key});
-
   @override
   State<PaymentMethodListView> createState() => _PaymentMethodListViewState();
 }
@@ -16,7 +14,6 @@ class _PaymentMethodListViewState extends State<PaymentMethodListView> {
     'assets/images/Group1.svg',
   ];
   int activeIndex = 0;
-
   Widget build(BuildContext context) {
     return SizedBox(
       height: 62,
