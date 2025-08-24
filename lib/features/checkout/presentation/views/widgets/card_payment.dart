@@ -35,7 +35,7 @@ class CardPayment extends StatelessWidget {
           ),
           color: Colors.white,
         ),
-        child: Center(child: SvgPicture.asset(icon, height: 31)),
+        child: Center(child: SvgPicture.asset(icon)),
       ),
     );
   }
