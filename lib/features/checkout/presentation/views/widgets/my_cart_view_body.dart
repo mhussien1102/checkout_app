@@ -1,3 +1,4 @@
+import 'package:checkout_app/features/checkout/presentation/views/payment_details.dart';
 import 'package:checkout_app/features/checkout/presentation/views/widgets/order_info.dart';
 import 'package:checkout_app/features/checkout/presentation/views/widgets/total_price.dart'
     show TotalPrice;
@@ -32,7 +33,15 @@ class MyCartViewBody extends StatelessWidget {
           SizedBox(height: 15),
           TotalPrice(totalPrice: 50.97),
           SizedBox(height: 16),
-          CustomButton(txt: 'Complete Payment', onPressed: () {}),
+          CustomButton(
+            txt: 'Complete Payment',
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => PaymentDetails()),
+              );
+            },
+          ),
           SizedBox(height: 12),
         ],
       ),
