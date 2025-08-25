@@ -9,13 +9,15 @@ class PaymentDetailsBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Padding(
       padding: EdgeInsets.symmetric(horizontal: 20),
-      child: Column(
-        children: [
-          SizedBox(height: 32),
-          PaymentMethodListView(),
-          SizedBox(height: 34),
-          CustomCreditCard(),
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(height: 32),
+            PaymentMethodListView(),
+            SizedBox(height: 34),
+            CustomCreditCard(),
+          ],
+        ),
       ),
     );
   }
