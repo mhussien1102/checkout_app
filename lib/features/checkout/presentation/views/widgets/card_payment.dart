@@ -27,7 +27,7 @@ class CardPayment extends StatelessWidget {
           ),
         ],
       ),
-      duration: Duration(milliseconds: 600),
+      duration: Duration(milliseconds: 300),
       child: Container(
         decoration: ShapeDecoration(
           shape: RoundedRectangleBorder(

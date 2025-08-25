@@ -16,7 +16,7 @@ class OrderInfo extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(nameProduct, style: AppTextStyles.text18w400),
-        Text("\$${priceProduct}", style: AppTextStyles.text18w400),
+        Text("\$$priceProduct", style: AppTextStyles.text18w400),
       ],
     );
   }

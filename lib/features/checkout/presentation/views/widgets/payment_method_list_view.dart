@@ -14,6 +14,7 @@ class _PaymentMethodListViewState extends State<PaymentMethodListView> {
     'assets/images/Group1.svg',
   ];
   int activeIndex = 0;
+  @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 62,

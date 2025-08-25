@@ -12,7 +12,7 @@ class TotalPrice extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text("Total", style: AppTextStyles.text24w600),
-        Text("\$${totalPrice}", style: AppTextStyles.text24w600),
+        Text("\$$totalPrice", style: AppTextStyles.text24w600),
       ],
     );
   }

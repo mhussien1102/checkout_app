@@ -38,6 +38,7 @@ dependencies:
   flutter_bloc: ^9.1.1
   cubit_base: ^0.0.5
   equatable: ^2.0.7
+  flutter_credit_card: ^4.1.0
 
 dev_dependencies:
   flutter_test:
