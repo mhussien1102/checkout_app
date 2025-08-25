@@ -9,6 +9,7 @@ class PaymentDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: buildAppBar('Payment Details'),
       body: PaymentDetailsBody(),
     );

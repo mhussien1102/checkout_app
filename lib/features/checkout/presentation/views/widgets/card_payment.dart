@@ -9,7 +9,7 @@ class CardPayment extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimatedContainer(
       height: 62,
-      width: 103,
+      width: 85,
       decoration: ShapeDecoration(
         shape: RoundedRectangleBorder(
           side: BorderSide(
