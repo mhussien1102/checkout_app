@@ -38,7 +38,6 @@ class _CustomCreditCardState extends State<CustomCreditCard> {
             showBackView = carditCardModel.isCvvFocused;
             setState(() {});
           },
-
           formKey: formKey,
         ),
       ],

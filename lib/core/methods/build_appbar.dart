@@ -12,7 +12,7 @@ AppBar buildAppBar(String title) {
       ),
     ),
     elevation: 0,
-    backgroundColor: Colors.transparent,
+    backgroundColor: Colors.white,
     title: Text(title, style: AppTextStyles.text25w500),
     centerTitle: true,
   );
