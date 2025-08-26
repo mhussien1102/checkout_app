@@ -3,12 +3,18 @@ import 'package:checkout_app/features/checkout/presentation/views/widgets/Custom
 import 'package:checkout_app/features/checkout/presentation/views/widgets/payment_method_list_view.dart';
 import 'package:flutter/material.dart';
 
-class PaymentDetailsBody extends StatelessWidget {
+class PaymentDetailsBody extends StatefulWidget {
   const PaymentDetailsBody({super.key});
 
   @override
+  State<PaymentDetailsBody> createState() => _PaymentDetailsBodyState();
+}
+
+class _PaymentDetailsBodyState extends State<PaymentDetailsBody> {
+  final GlobalKey<FormState> formKey = GlobalKey();
+  AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
+  @override
   Widget build(BuildContext context) {
-    final GlobalKey<FormState> formKey = GlobalKey();
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: CustomScrollView(
@@ -16,12 +22,27 @@ class PaymentDetailsBody extends StatelessWidget {
           const SliverToBoxAdapter(child: SizedBox(height: 32)),
           const SliverToBoxAdapter(child: PaymentMethodListView()),
           const SliverToBoxAdapter(child: SizedBox(height: 34)),
-          const SliverToBoxAdapter(child: CustomCreditCard()),
+          SliverToBoxAdapter(
+            child: CustomCreditCard(
+              formKey: formKey,
+              autovalidateMode: autovalidateMode,
+            ),
+          ),
           SliverFillRemaining(
             hasScrollBody: false,
             child: Align(
               alignment: Alignment.bottomCenter,
-              child: CustomButton(txt: "Pay", onPressed: () {}),
+              child: CustomButton(
+                txt: "Pay",
+                onPressed: () {
+                  if (formKey.currentState!.validate()) {
+                    formKey.currentState!.save();
+                  } else {
+                    autovalidateMode = AutovalidateMode.always;
+                    setState(() {});
+                  }
+                },
+              ),
             ),
           ),
           const SliverToBoxAdapter(child: SizedBox(height: 12)),
