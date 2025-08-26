@@ -1,4 +1,4 @@
-import 'package:checkout_app/features/checkout/presentation/views/payment_details.dart';
+import 'package:checkout_app/features/checkout/presentation/views/payment_details_view.dart';
 import 'package:checkout_app/features/checkout/presentation/views/widgets/order_info.dart';
 import 'package:checkout_app/features/checkout/presentation/views/widgets/total_price.dart'
     show TotalPrice;
